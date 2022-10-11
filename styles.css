@@ -117,15 +117,25 @@ section {
 .section2{
     z-index: 3;
     background-color: #fff;
+    display: none;
 }
 
 .section3{
     z-index: 2;
+    background: url(/images/bg-horizontal3-1920x1080.jpg);
+    display: none;
 }
 
 .section4{
     z-index: 1;
+    background-color: #fff;
+    display: none;
 }
+
+.section5{
+    background: url(/images/bg-horizontal5-1920x1080.jpg);
+}
+
 
 .wrapper {
     grid-area: main;
@@ -176,4 +186,167 @@ section {
 /* Break */
 .services {
     grid-row: 2; 
+    display: flex;
+    flex-direction: column;
+}
+
+.services > div h2 {
+    font-family: var(--font-sec);
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.srvlist{
+    margin-top: 4em;
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.srvlist > div {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.srvlist > div p:nth-child(1){
+    font-size: 2em;
+    font-family: var(--font-sec);
+}
+
+.srvlist > div p:nth-child(2){
+    font-weight: 400;
+    font-family: var(--font-sec);
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.srvlist > div p:nth-child(3){
+    font-size: .85em;
+}
+
+.srvlist > div button{
+    background-color: var(--text-red);
+    border: none;
+    padding: 1em;
+    width: max-content;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* Break */
+.section3 > div {
+    justify-content: flex-start;
+}
+
+.projects {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects h3 {
+    font-size: 1em;
+}
+
+.projects > p:nth-of-type(1){
+    font-size: 6em;
+    font-family: var(--font-sec);
+}
+
+.projects p:nth-of-type(2){
+    font-size: 1.5em;
+    font-family: var(--font-sec);
+    margin: auto 0;
+}
+
+.grpbtn {
+    margin: auto 0;
+}
+
+.grpbtn button {
+    background-color: var(--text-red);
+    border: none;
+    padding: 1em 2em;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: inherit;
+}
+
+.grpbtn button:nth-child(2){
+    background-color: transparent;
+}
+
+/* Break */
+.clients {
+    grid-row: 2;
+}
+
+.clients h2{
+    font-family: var(--font-sec);
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.clients ul {
+    display: grid;
+    grid-template-columns: repeat( 5 , 1fr);
+    margin-top: 3em;
+    border-left: 1px solid var(--text-grey);
+    border-top: 1px solid var(--text-grey);
+}
+
+.clients li {
+    padding: 2em;
+    border-right: 1px solid var(--text-grey);
+    border-bottom: 1px solid var(--text-grey);
+    text-align: center;
+    padding: 1.7em;
+    cursor: pointer;
+}
+
+.clients img {
+    opacity: .5;
+}
+
+/* Break */
+.section5 > div {
+    justify-content: flex-start;
+}
+
+.contact {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact div:nth-child(1) > p:nth-of-type(1){
+    font-family: var(--font-sec);
+    font-size: 5em;
+}
+
+.contact div:nth-child(2){
+    color: var(--text-white);
+    font-size: 2em;
+    margin: auto 0
+} 
+
+
+.contact div:nth-child(2) a{
+    color: inherit;
+}
+
+.contact button {
+    width: max-content;
+    padding: 1em;
+    background-color: var(--text-red);
+    font-family: inherit;
+    margin: auto 0;
 }
