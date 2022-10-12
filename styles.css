@@ -67,13 +67,14 @@ li{
 body{
     display: grid;
     grid-template-columns: 3.5vw 10fr 3.5vw;
-    grid-template-rows: 10vh 10fr 10vh;
+    grid-template-rows: 10vh 10fr max-content;
     grid-template-areas: 
       ". head ."
       "sl main sr"
       ". foot ." ;
     height: 100vh;
     font-family: var(--font-pry);
+    color: #fff;
 }
 
 main{
@@ -104,7 +105,7 @@ section {
     grid-template-rows: 10vh 10fr 10vh;
     grid-template-areas: 
       ". . . . ."
-      ". . main . ."
+      ". id main . ."
       ". . . . ." ;
 }
 
@@ -112,6 +113,7 @@ section {
     z-index: 4;
     background: url(/images/bg-horizontal1-1920x1080.jpg);
     display: none;
+
 }
 
 .section2{
@@ -146,6 +148,72 @@ section {
 
 /* Styling */
 
+.header {
+    justify-content: center;
+}
+
+.header div:nth-child(1) {
+    font-size: 2em;
+    font-family: var(--font-sec);
+    padding-right: 1em;
+}
+
+.header div:nth-child(1) > span:nth-child(2){
+    font-family: var(--font-pry);
+    font-size: .4em;
+    width: 14ch;
+    margin-left: 1em;
+} 
+
+.header div:nth-child(2){
+    font-size: .75em;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+.header div:nth-child(2) p{
+    margin-right: 7em;
+}
+
+.menu {
+    flex-basis: fit-content;
+}
+
+.menu button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: .8em;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+/* Break */
+.icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons span {
+    margin-bottom: 2em;
+}
+
+
+/* Break */
+
+.id{
+    grid-area: id;
+    display: grid;
+    grid-auto-rows: 15% auto;
+}
+
+.id p {
+    grid-row: 2;
+    font-size: 2.5em;
+    font-family: var(--font-sec);
+    font-weight: 600;
+}
+
 .section1 > div {
     justify-content: start;
 }
@@ -154,7 +222,6 @@ section {
     grid-row: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .tit-blk h1{
@@ -169,6 +236,7 @@ section {
     font-size: 1.5em;
     font-weight: 700;
     font-family: var(--font-sec);
+    margin-top: 1em;
 }
 
 .tit-blk p:nth-of-type(2){
@@ -177,9 +245,10 @@ section {
 }
 
 .playbtn {
+    margin: auto 0;
     width: 3em;
     height: 3em;
-    border: 1px solid var(--text-red);
+    border: 2px solid var(--text-red);
     border-radius: 50%;
 }
 
@@ -330,6 +399,7 @@ section {
 .contact div:nth-child(1) > p:nth-of-type(1){
     font-family: var(--font-sec);
     font-size: 5em;
+    line-height: 1;
 }
 
 .contact div:nth-child(2){
@@ -338,14 +408,14 @@ section {
     margin: auto 0
 } 
 
-
 .contact div:nth-child(2) a{
     color: inherit;
 }
 
 .contact button {
     width: max-content;
-    padding: 1em;
+    font-size: 1em;
+    padding: 1em 2em;
     background-color: var(--text-red);
     font-family: inherit;
     margin: auto 0;
