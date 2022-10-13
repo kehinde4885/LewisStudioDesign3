@@ -7,6 +7,7 @@
     --text-red: #ff3600;
     --text-black: #000;
     --text-white: #fff;
+    --def-color: #fff;
 }
 
 
@@ -74,7 +75,8 @@ body{
       ". foot ." ;
     height: 100vh;
     font-family: var(--font-pry);
-    color: #fff;
+    color: var(--def-color);
+    overflow: hidden;
 }
 
 main{
@@ -90,6 +92,7 @@ header {
     grid-area: head;
     z-index: 6;
     display: flex;
+
 }
 
 .footer{
@@ -112,26 +115,23 @@ section {
 .section1{
     z-index: 4;
     background: url(/images/bg-horizontal1-1920x1080.jpg);
-    display: none;
 
 }
 
 .section2{
     z-index: 3;
     background-color: #fff;
-    display: none;
+
 }
 
 .section3{
     z-index: 2;
     background: url(/images/bg-horizontal3-1920x1080.jpg);
-    display: none;
 }
 
 .section4{
     z-index: 1;
     background-color: #fff;
-    display: none;
 }
 
 .section5{
