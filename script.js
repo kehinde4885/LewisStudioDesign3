@@ -51,7 +51,10 @@ function pageleftOut(target){
 }
 
 
-let master = gsap.timeline();
+let master = gsap.timeline({
+    repeat: -1 ,
+    yoyo: true
+});
 
 //master.pause()
 
